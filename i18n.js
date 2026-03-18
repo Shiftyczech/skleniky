@@ -728,6 +728,36 @@ const translations = {
 // ===== i18n ENGINE =====
 let currentLang = localStorage.getItem("lang") || "cs";
 
+// Simple HTML sanitizer – only allow safe tags and attributes
+function sanitizeHTML(html) {
+  var temp = document.createElement("div");
+  temp.innerHTML = html;
+  temp.querySelectorAll("*").forEach(function (el) {
+    var tag = el.tagName.toLowerCase();
+    var allowed = ["strong", "em", "br", "a", "span", "b", "i"];
+    if (allowed.indexOf(tag) === -1) {
+      el.replaceWith(document.createTextNode(el.textContent));
+      return;
+    }
+    // Only allow safe attributes
+    Array.from(el.attributes).forEach(function (attr) {
+      if (tag === "a" && (attr.name === "href" || attr.name === "target" || attr.name === "rel")) {
+        // Validate href – only allow http(s), mailto, tel, and anchor links
+        if (attr.name === "href") {
+          var val = attr.value.trim().toLowerCase();
+          if (!(val.startsWith("http://") || val.startsWith("https://") || val.startsWith("mailto:") || val.startsWith("tel:") || val.startsWith("#"))) {
+            el.removeAttribute(attr.name);
+          }
+        }
+        return;
+      }
+      if (tag === "strong" && attr.name === "style") return;
+      el.removeAttribute(attr.name);
+    });
+  });
+  return temp.innerHTML;
+}
+
 function setLanguage(lang) {
   if (!translations[lang]) return;
   currentLang = lang;
@@ -747,10 +777,10 @@ function setLanguage(lang) {
     if (t[key] !== undefined) el.textContent = t[key];
   });
 
-  // Translate [data-i18n-html] → innerHTML
+  // Translate [data-i18n-html] → innerHTML (sanitized)
   document.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const key = el.getAttribute("data-i18n-html");
-    if (t[key] !== undefined) el.innerHTML = t[key];
+    if (t[key] !== undefined) el.innerHTML = sanitizeHTML(t[key]);
   });
 
   // Translate placeholders

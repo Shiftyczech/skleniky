@@ -140,6 +140,12 @@ function openLightbox(element) {
   updateBodyOverflow();
 }
 
+// Gallery click delegation (no inline onclick)
+document.addEventListener("click", function (e) {
+  const item = e.target.closest(".gallery-item");
+  if (item) openLightbox(item);
+});
+
 function closeLightbox() {
   lightbox.classList.remove("active");
   updateBodyOverflow();
@@ -181,6 +187,17 @@ lightboxImg.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
+// Close lightbox when clicking on backdrop
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+
+// Close button
+document.querySelector(".lightbox-close").addEventListener("click", (e) => {
+  e.stopPropagation();
+  closeLightbox();
+});
+
 // Lightbox navigation buttons click
 document.getElementById("lightboxPrev").addEventListener("click", (e) => {
   e.stopPropagation();
@@ -220,9 +237,23 @@ const submitBtn   = document.getElementById("submitBtn");
 const formSuccess = document.getElementById("formSuccess");
 const formError   = document.getElementById("formError");
 
+let lastSubmitTime = 0;
+const SUBMIT_COOLDOWN_MS = 10000;
+
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    // Honeypot check – bots fill this hidden field
+    const honeypot = contactForm.querySelector("[name='website']");
+    if (honeypot && honeypot.value) return;
+
+    // Rate limiting – prevent rapid resubmission
+    const now = Date.now();
+    if (now - lastSubmitTime < SUBMIT_COOLDOWN_MS) {
+      return;
+    }
+    lastSubmitTime = now;
 
     const originalText = submitBtn.textContent;
     submitBtn.textContent = (typeof translations !== "undefined" && translations[currentLang])
