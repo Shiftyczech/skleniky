@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://frame.mapy.cz; connect-src 'self' https://api.emailjs.com;" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; frame-src https://frame.mapy.cz https://mapy.com; connect-src 'self' https://api.emailjs.com;" />
     <meta
       name="description"
       content="Skleníky Tobiáš – kvalitní šroubované skleníky pro beztmelé zasklení. Nejlevnější skleníky na českém trhu s pevnou konstrukcí. Daniel Tobiáš, Nymburk."
@@ -40,6 +40,11 @@
     <meta name="twitter:image" content="https://www.sklenikytobias.cz/images/reference/re11.jpg" />
 
     <title>Skleníky Tobiáš – Šroubované skleníky pro beztmelé zasklení</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://api.emailjs.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" />
     <link rel="preload" as="image" type="image/webp" href="images/reference/re11.webp" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="images/logo_tobias.webp" type="image/webp" />
@@ -89,7 +94,7 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-badge">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span data-i18n="hero.badge">Aktuální cenová akce – ušetřete až 900 Kč</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hero-badge-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span data-i18n="hero.badge">Aktuální cenová akce – ušetřete až 900 Kč</span>
           </div>
           <h1 data-i18n-html="hero.title">Kvalitní <span>šroubované skleníky</span> za nejlepší ceny</h1>
           <p class="hero-text" data-i18n="hero.text">
@@ -152,7 +157,7 @@
             </div>
             <div class="czech-badge-text">
               <strong data-i18n="about.badge2_title">Rodinná firma od roku 1926</strong>
-              <span data-i18n="about.badge2_text">Sklenářství Tobiáš – přes 95 let zkušeností</span>
+              <span data-i18n="about.badge2_text">Sklenářství Tobiáš – přes 100 let zkušeností</span>
             </div>
           </div>
           <div class="czech-badge">
@@ -268,7 +273,7 @@
                 <span class="product-price-old" data-price-czk="13850">13 850 Kč</span>
                 <span class="product-price-unit" data-i18n="products.vat">vč. DPH</span>
               </div>
-              <a href="#contact" class="btn btn-primary" style="width: 100%" data-i18n="products.inquiry"
+              <a href="#contact" class="btn btn-primary btn-full" data-i18n="products.inquiry"
                 >Nezávazná poptávka</a
               >
             </div>
@@ -286,7 +291,7 @@
                   decoding="async"
                 />
               </picture>
-              <span class="product-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" style="vertical-align: middle; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span data-i18n="products.badge_popular">Oblíbený</span></span>
+              <span class="product-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" class="product-badge-icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span data-i18n="products.badge_popular">Oblíbený</span></span>
             </div>
             <div class="product-info">
               <div class="product-name">OPTIMÁL</div>
@@ -313,7 +318,7 @@
                 <span class="product-price-old" data-price-czk="14950">14 950 Kč</span>
                 <span class="product-price-unit" data-i18n="products.vat">vč. DPH</span>
               </div>
-              <a href="#contact" class="btn btn-primary" style="width: 100%" data-i18n="products.inquiry"
+              <a href="#contact" class="btn btn-primary btn-full" data-i18n="products.inquiry"
                 >Nezávazná poptávka</a
               >
             </div>
@@ -358,7 +363,7 @@
                 <span class="product-price-old" data-price-czk="16800">16 800 Kč</span>
                 <span class="product-price-unit" data-i18n="products.vat">vč. DPH</span>
               </div>
-              <a href="#contact" class="btn btn-primary" style="width: 100%" data-i18n="products.inquiry"
+              <a href="#contact" class="btn btn-primary btn-full" data-i18n="products.inquiry"
                 >Nezávazná poptávka</a
               >
             </div>
@@ -403,7 +408,7 @@
                 <span class="product-price-old" data-price-czk="11950">11 950 Kč</span>
                 <span class="product-price-unit" data-i18n="products.vat">vč. DPH</span>
               </div>
-              <a href="#contact" class="btn btn-primary" style="width: 100%" data-i18n="products.inquiry"
+              <a href="#contact" class="btn btn-primary btn-full" data-i18n="products.inquiry"
                 >Nezávazná poptávka</a
               >
             </div>
@@ -448,7 +453,7 @@
                 <span class="product-price-old" data-price-czk="14650">14 650 Kč</span>
                 <span class="product-price-unit" data-i18n="products.vat">vč. DPH</span>
               </div>
-              <a href="#contact" class="btn btn-primary" style="width: 100%" data-i18n="products.inquiry"
+              <a href="#contact" class="btn btn-primary btn-full" data-i18n="products.inquiry"
                 >Nezávazná poptávka</a
               >
             </div>
@@ -461,8 +466,8 @@
     <section id="construction">
       <div class="container">
         <div class="section-title reveal">
-          <h2>Konstrukce a technologie</h2>
-          <p>
+          <h2 data-i18n="construction.title">Konstrukce a technologie</h2>
+          <p data-i18n="construction.subtitle">
             Naše skleníky jsou navrženy pro maximální pevnost a snadnou montáž.
             Systém „Lego pro dospělé".
           </p>
@@ -798,7 +803,7 @@
 
         <p class="pricing-note reveal" data-i18n-html="pricing.note">
           Ceny jsou orientační a platné od 1. 2. 2025, vč. skla a 21% DPH. Přesnou cenu Vám sdělíme po upřesnění požadavků.
-          <br/>Skleníky lze prodloužit po 1 metru – CENTRÁL/OPTIMÁL <strong style="color:var(--green-300)">+4 550 Kč/m</strong>, MAXIMÁL <strong style="color:var(--green-300)">+5 550 Kč/m</strong>.
+          <br/>Skleníky lze prodloužit po 1 metru – CENTRÁL/OPTIMÁL <strong class="pricing-highlight">+4 550 Kč/m</strong>, MAXIMÁL <strong class="pricing-highlight">+5 550 Kč/m</strong>.
         </p>
       </div>
     </section>
@@ -877,7 +882,7 @@
                 <div class="history-stat-label" data-i18n="history.stat1_label">Rok založení</div>
               </div>
               <div class="history-stat">
-                <div class="history-stat-value">95+</div>
+                <div class="history-stat-value">100</div>
                 <div class="history-stat-label" data-i18n="history.stat2_label">Let zkušeností</div>
               </div>
               <div class="history-stat">
@@ -894,15 +899,15 @@
               </div>
               <div class="badge-3c-items">
                 <div class="badge-3c-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-3c-svg"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
                   <span data-i18n="history.badge_item1">Český výrobek</span>
                 </div>
                 <div class="badge-3c-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-3c-svg"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                   <span data-i18n="history.badge_item2">Český dodavatel</span>
                 </div>
                 <div class="badge-3c-item">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="badge-3c-svg"><polyline points="20 6 9 17 4 12"/></svg>
                   <span data-i18n="history.badge_item3">Česká kvalita</span>
                 </div>
               </div>
@@ -1348,17 +1353,16 @@
             <!-- Vložená mapa -->
             <div class="contact-map">
               <iframe
-                src="https://frame.mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=16&source=firm&id=13195262"
+                src="https://mapy.com/zakladni?x=15.0443220&y=50.1911050&z=16&source=firm&id=13195262&frame=1"
                 width="100%"
                 height="220"
-                style="border:0; border-radius: 12px;"
-                sandbox="allow-scripts allow-same-origin"
+                class="contact-map-iframe"
                 allowfullscreen
                 loading="lazy"
                 title="Poloha firmy Daniel Tobiáš na mapě"
               ></iframe>
               <a
-                href="https://mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
+                href="https://mapy.com/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
                 target="_blank"
                 rel="noopener"
                 class="map-link"
@@ -1370,7 +1374,7 @@
             <p class="form-note" data-i18n="contact.form_note">Formulář nás osloví přímo – zavoláme zpět do 1–2 pracovních dnů.</p>
             <form id="contactForm">
               <!-- Honeypot anti-spam field – hidden from real users -->
-              <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;">
+              <div aria-hidden="true" class="honeypot-field">
                 <label for="website">Website</label>
                 <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
               </div>
@@ -1428,13 +1432,13 @@
                   data-i18n-placeholder="contact.placeholder_message"
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%" id="submitBtn" data-i18n="contact.submit">
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn" data-i18n="contact.submit">
                 Odeslat poptávku →
               </button>
-              <div id="formSuccess" class="form-success" style="display:none" data-i18n="contact.success">
+              <div id="formSuccess" class="form-success form-hidden" data-i18n="contact.success">
                 ✅ Poptávka odeslána! Ozveme se Vám brzy.
               </div>
-              <div id="formError" class="form-error" style="display:none" data-i18n-html="contact.error">
+              <div id="formError" class="form-error form-hidden" data-i18n-html="contact.error">
                 ❌ Něco se pokazilo. Zkuste nám napsat přímo na <a href="mailto:info@sklenikytobias.cz">info@sklenikytobias.cz</a>
               </div>
             </form>
@@ -1448,7 +1452,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <h3><img src="images/logo_tobias.webp" alt="Logo" style="height: 28px; vertical-align: middle; margin-right: 8px;">Skleníky Tobiáš</h3>
+            <h3><img src="images/logo_tobias.webp" alt="Logo" class="footer-logo-img">Skleníky Tobiáš</h3>
             <p data-i18n="footer.brand_text">
               Kvalitní šroubované skleníky za nejlepší ceny na českém trhu.
               Firma Daniel Tobiáš – Váš spolehlivý partner pro pěstování.
@@ -1524,12 +1528,12 @@
         "postalCode": "288 02",
         "addressCountry": "CZ"
       },
-      "vatID": "64729338",
+      "taxID": "64729338",
       "areaServed": "CZ",
       "priceRange": "$$",
       "image": "https://www.sklenikytobias.cz/images/reference/re11.jpg",
       "sameAs": [
-        "https://mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
+        "https://mapy.com/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",

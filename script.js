@@ -1,11 +1,57 @@
 // ===== NAVBAR SCROLL =====
 const navbar = document.getElementById("navbar");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
+// ===== ACTIVE NAV LINK =====
+const sections = document.querySelectorAll("section[id]");
+const navLinkEls = document.querySelectorAll(".nav-link");
+
+// ===== SCROLL TO TOP =====
+const scrollTopBtn = document.getElementById("scrollTop");
+
+// ===== UNIFIED SCROLL HANDLER (rAF-throttled) =====
+let scrollTicking = false;
+
+function onScroll() {
+  const scrollY = window.scrollY;
+
+  // Navbar background
+  if (scrollY > 50) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
+  }
+
+  // Active nav link
+  const offset = scrollY + 100;
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    if (offset >= sectionTop && offset < sectionTop + sectionHeight) {
+      navLinkEls.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + sectionId) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+
+  // Scroll-to-top button visibility
+  if (scrollY > 400) {
+    scrollTopBtn.classList.add("visible");
+  } else {
+    scrollTopBtn.classList.remove("visible");
+  }
+
+  scrollTicking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!scrollTicking) {
+    requestAnimationFrame(onScroll);
+    scrollTicking = true;
   }
 });
 
@@ -29,30 +75,6 @@ navLinks.querySelectorAll("a").forEach((link) => {
     updateBodyOverflow();
   });
 });
-
-// ===== ACTIVE NAV LINK =====
-const sections = document.querySelectorAll("section[id]");
-
-function updateActiveLink() {
-  const scrollY = window.scrollY + 100;
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.offsetHeight;
-    const sectionId = section.getAttribute("id");
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      document.querySelectorAll(".nav-link").forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === "#" + sectionId) {
-          link.classList.add("active");
-        }
-      });
-    }
-  });
-}
-
-window.addEventListener("scroll", updateActiveLink);
 
 // ===== SCROLL REVEAL =====
 const revealElements = document.querySelectorAll(".reveal");
@@ -260,16 +282,16 @@ if (contactForm) {
       ? translations[currentLang]["contact.submitting"]
       : "Odesílám...";
     submitBtn.disabled = true;
-    formSuccess.style.display = "none";
-    formError.style.display   = "none";
+    formSuccess.classList.add("form-hidden");
+    formError.classList.add("form-hidden");
 
     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm)
       .then(function () {
-        formSuccess.style.display = "block";
+        formSuccess.classList.remove("form-hidden");
         contactForm.reset();
       })
       .catch(function () {
-        formError.style.display = "block";
+        formError.classList.remove("form-hidden");
       })
       .finally(function () {
         submitBtn.textContent = originalText;
@@ -279,16 +301,6 @@ if (contactForm) {
 }
 
 // ===== SCROLL TO TOP =====
-const scrollTopBtn = document.getElementById("scrollTop");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 400) {
-    scrollTopBtn.classList.add("visible");
-  } else {
-    scrollTopBtn.classList.remove("visible");
-  }
-});
-
 scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });

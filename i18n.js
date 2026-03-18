@@ -56,7 +56,7 @@ const translations = {
     "about.badge1_title": "Český výrobek",
     "about.badge1_text": "Český dodavatel · Česká kvalita",
     "about.badge2_title": "Rodinná firma od roku 1926",
-    "about.badge2_text": "Sklenářství Tobiáš – přes 95 let zkušeností",
+    "about.badge2_text": "Sklenářství Tobiáš – přes 100 let zkušeností",
     "about.badge3_title": "Bezkonkurenční ceny",
     "about.badge3_text": "Nejlevnější skleníky na českém trhu",
     "about.f1_title": "Šroubovaná konstrukce",
@@ -145,7 +145,7 @@ const translations = {
     "pricing.acc_paint_desc": "Akrylátová barva na profily",
     "pricing.acc_shelf_price": "30 Kč / ks",
     "pricing.acc_onrequest": "Na dotaz",
-    "pricing.note": 'Ceny jsou orientační a platné od 1. 2. 2025, vč. skla a 21% DPH. Přesnou cenu Vám sdělíme po upřesnění požadavků.<br/>Skleníky lze prodloužit po 1 metru – CENTRÁL/OPTIMÁL <strong style="color:var(--green-300)">+4 550 Kč/m</strong>, MAXIMÁL <strong style="color:var(--green-300)">+5 550 Kč/m</strong>.',
+    "pricing.note": 'Ceny jsou orientační a platné od 1. 2. 2025, vč. skla a 21% DPH. Přesnou cenu Vám sdělíme po upřesnění požadavků.<br/>Skleníky lze prodloužit po 1 metru – CENTRÁL/OPTIMÁL <strong class="pricing-highlight">+4 550 Kč/m</strong>, MAXIMÁL <strong class="pricing-highlight">+5 550 Kč/m</strong>.',
 
     // Services
     "services.title": "Naše služby",
@@ -291,7 +291,7 @@ const translations = {
     "about.badge1_title": "Czech product",
     "about.badge1_text": "Czech supplier · Czech quality",
     "about.badge2_title": "Family business since 1926",
-    "about.badge2_text": "Tobiáš Glaziery – over 95 years of experience",
+    "about.badge2_text": "Tobiáš Glaziery – over 100 years of experience",
     "about.badge3_title": "Unbeatable prices",
     "about.badge3_text": "The most affordable greenhouses on the Czech market",
     "about.f1_title": "Bolted construction",
@@ -380,7 +380,7 @@ const translations = {
     "pricing.acc_paint_desc": "Acrylic paint for profiles",
     "pricing.acc_shelf_price": "$1.30 / pc",
     "pricing.acc_onrequest": "On request",
-    "pricing.note": 'Prices are indicative, valid from 1 Feb 2025, incl. glass and 21% VAT. We will provide the exact price after specifying your requirements.<br/>Greenhouses can be extended by 1 meter – CENTRÁL/OPTIMÁL <strong style="color:var(--green-300)">+$198/m</strong>, MAXIMÁL <strong style="color:var(--green-300)">+$241/m</strong>.',
+    "pricing.note": 'Prices are indicative, valid from 1 Feb 2025, incl. glass and 21% VAT. We will provide the exact price after specifying your requirements.<br/>Greenhouses can be extended by 1 meter – CENTRÁL/OPTIMÁL <strong class="pricing-highlight">+$198/m</strong>, MAXIMÁL <strong class="pricing-highlight">+$241/m</strong>.',
 
     // Services
     "services.title": "Our services",
@@ -526,7 +526,7 @@ const translations = {
     "about.badge1_title": "Tschechisches Produkt",
     "about.badge1_text": "Tschechischer Lieferant · Tschechische Qualität",
     "about.badge2_title": "Familienunternehmen seit 1926",
-    "about.badge2_text": "Glaserei Tobiáš – über 95 Jahre Erfahrung",
+    "about.badge2_text": "Glaserei Tobiáš – über 100 Jahre Erfahrung",
     "about.badge3_title": "Konkurrenzlose Preise",
     "about.badge3_text": "Die günstigsten Gewächshäuser auf dem tschechischen Markt",
     "about.f1_title": "Verschraubte Konstruktion",
@@ -615,7 +615,7 @@ const translations = {
     "pricing.acc_paint_desc": "Acrylfarbe für Profile",
     "pricing.acc_shelf_price": "1,20 € / Stk.",
     "pricing.acc_onrequest": "Auf Anfrage",
-    "pricing.note": 'Preise sind Richtwerte, gültig ab 1. 2. 2025, inkl. Glas und 21% MwSt. Den genauen Preis teilen wir Ihnen nach Klärung Ihrer Anforderungen mit.<br/>Gewächshäuser können um 1 Meter verlängert werden – CENTRÁL/OPTIMÁL <strong style="color:var(--green-300)">+182 €/m</strong>, MAXIMÁL <strong style="color:var(--green-300)">+222 €/m</strong>.',
+    "pricing.note": 'Preise sind Richtwerte, gültig ab 1. 2. 2025, inkl. Glas und 21% MwSt. Den genauen Preis teilen wir Ihnen nach Klärung Ihrer Anforderungen mit.<br/>Gewächshäuser können um 1 Meter verlängert werden – CENTRÁL/OPTIMÁL <strong class="pricing-highlight">+182 €/m</strong>, MAXIMÁL <strong class="pricing-highlight">+222 €/m</strong>.',
 
     // Services
     "services.title": "Unsere Leistungen",
@@ -751,7 +751,7 @@ function sanitizeHTML(html) {
         }
         return;
       }
-      if (tag === "strong" && attr.name === "style") return;
+      if (attr.name === "class") return;
       el.removeAttribute(attr.name);
     });
   });

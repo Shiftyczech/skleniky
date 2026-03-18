@@ -1,5 +1,4 @@
 /* ===== DESIGN SYSTEM ===== */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap");
 
 :root {
   /* Colors */
@@ -396,6 +395,11 @@ h4 {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.hero-badge-icon {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
 .hero h1 {
   color: var(--white);
   margin-bottom: var(--space-lg);
@@ -494,6 +498,10 @@ h4 {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
   color: var(--green-700);
+}
+
+.btn-full {
+  width: 100%;
 }
 
 /* ===== SECTIONS ===== */
@@ -614,6 +622,11 @@ section {
   border-radius: var(--radius-full);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.product-badge-icon {
+  vertical-align: middle;
+  margin-right: 4px;
 }
 
 .product-info {
@@ -843,6 +856,10 @@ section {
   padding: var(--space-xl);
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.9rem;
+}
+
+.pricing-highlight {
+  color: var(--green-300);
 }
 
 /* ===== SERVICES ===== */
@@ -1077,6 +1094,14 @@ section {
   color: var(--white);
   font-size: 1.15rem;
   margin-bottom: var(--space-sm);
+}
+
+.footer-logo-img {
+  height: 28px;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline;
 }
 
 .footer-brand p {
@@ -1786,6 +1811,10 @@ section {
   gap: 0.5rem;
 }
 
+.badge-3c-svg {
+  flex-shrink: 0;
+}
+
 
 .history-img-grid {
   display: grid;
@@ -1922,6 +1951,11 @@ section {
   overflow: hidden;
 }
 
+.contact-map-iframe {
+  border: 0;
+  border-radius: 12px;
+}
+
 .map-link {
   display: inline-block;
   margin-top: var(--space-sm);
@@ -1970,6 +2004,16 @@ section {
 .form-error a {
   color: #c62828;
   text-decoration: underline;
+}
+
+.form-hidden {
+  display: none;
+}
+
+.honeypot-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
 }
 
 /* ===== RESPONSIVE - NEW SECTIONS ===== */
