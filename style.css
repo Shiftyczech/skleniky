@@ -1112,6 +1112,41 @@ section {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: 10;
+  line-height: 1;
+}
+
+.lightbox-prev {
+  left: 24px;
+}
+
+.lightbox-next {
+  right: 24px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .construction-grid {

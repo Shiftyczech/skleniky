@@ -340,7 +340,7 @@
           <div class="product-card reveal">
             <div class="product-image">
               <img
-                src="images/satelit_old.jpg"
+                src="images/satelit24_old.jpg"
                 alt="Skleník SATELIT 2"
                 loading="lazy"
               />
@@ -982,6 +982,86 @@
             />
             <div class="gallery-item-overlay"><span>Detail profilu</span></div>
           </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re13.jpg"
+              alt="Realizace skleníku 13"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re14.jpg"
+              alt="Realizace skleníku 14"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re15.jpg"
+              alt="Realizace skleníku 15"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re16.jpg"
+              alt="Realizace skleníku 16"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re17.jpg"
+              alt="Realizace skleníku 17"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re18.jpg"
+              alt="Realizace skleníku 18"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re19.jpg"
+              alt="Realizace skleníku 19"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re20.jpg"
+              alt="Realizace skleníku 20"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re21.jpg"
+              alt="Realizace skleníku 21"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
+          <div class="gallery-item" onclick="openLightbox(this)">
+            <img
+              src="images/reference/re27.jpg"
+              alt="Realizace skleníku 27"
+              loading="lazy"
+            />
+            <div class="gallery-item-overlay"><span>Realizace skleníku</span></div>
+          </div>
         </div>
       </div>
     </section>
@@ -1214,7 +1294,12 @@
               <li><a href="#about">O nás</a></li>
               <li><a href="#products">Skleníky</a></li>
               <li><a href="#construction">Konstrukce</a></li>
+              <li><a href="#assembly">Montáž</a></li>
               <li><a href="#pricing">Ceník</a></li>
+              <li><a href="#history">O firmě</a></li>
+              <li><a href="#gallery">Galerie</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contact">Kontakt</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -1233,7 +1318,7 @@
         </div>
         <div class="footer-bottom">
           <p>
-            &copy; 2025 Daniel Tobiáš – Skleníky Tobiáš. Všechna práva
+            &copy; <span id="footerYear">2025</span> Daniel Tobiáš – Skleníky Tobiáš. Všechna práva
             vyhrazena.
           </p>
           <p>IČ: 64729338 | Nymburk</p>
@@ -1247,7 +1332,9 @@
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
       <button class="lightbox-close" aria-label="Zavřít">&times;</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Předchozí">&#8249;</button>
       <img src="" alt="Zvětšený obrázek" id="lightboxImg" />
+      <button class="lightbox-next" id="lightboxNext" aria-label="Další">&#8250;</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
