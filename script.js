@@ -208,7 +208,9 @@ if (contactForm) {
     e.preventDefault();
 
     const originalText = submitBtn.textContent;
-    submitBtn.textContent = "Odesílám...";
+    submitBtn.textContent = (typeof translations !== "undefined" && translations[currentLang])
+      ? translations[currentLang]["contact.submitting"]
+      : "Odesílám...";
     submitBtn.disabled = true;
     formSuccess.style.display = "none";
     formError.style.display   = "none";
