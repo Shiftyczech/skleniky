@@ -191,6 +191,23 @@ document.getElementById("lightboxNext").addEventListener("click", (e) => {
   lightboxNext();
 });
 
+// ===== LIGHTBOX SWIPE (TOUCH) =====
+let touchStartX = 0;
+let touchEndX = 0;
+
+lightbox.addEventListener("touchstart", (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  const diff = touchStartX - touchEndX;
+  if (Math.abs(diff) > 50) {
+    if (diff > 0) lightboxNext();
+    else lightboxPrev();
+  }
+}, { passive: true });
+
 // ===== CONTACT FORM (EmailJS) =====
 const EMAILJS_PUBLIC_KEY  = "jRrL9jwNryWslqfqp";
 const EMAILJS_SERVICE_ID  = "service_cvxbj4k";

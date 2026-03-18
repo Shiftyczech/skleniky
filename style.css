@@ -526,7 +526,7 @@ section {
 /* ===== FEATURES/ABOUT ===== */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-xl);
 }
 
@@ -569,7 +569,7 @@ section {
 /* ===== PRODUCTS ===== */
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: var(--space-xl);
 }
 
@@ -848,7 +848,7 @@ section {
 /* ===== SERVICES ===== */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: var(--space-xl);
 }
 
@@ -903,7 +903,7 @@ section {
 /* ===== GALLERY ===== */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: var(--space-md);
 }
 
@@ -1227,8 +1227,11 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--space-lg);
+    gap: var(--space-md);
     z-index: 999;
+    padding: var(--space-2xl) var(--space-lg);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .nav-links.open {
@@ -1236,14 +1239,21 @@ section {
   }
 
   .nav-links a {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     color: var(--white) !important;
-    padding: 0.8rem 2rem;
+    padding: 0.75rem 2rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
   }
 
   .nav-toggle {
     display: flex;
     z-index: 1001;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
   }
 
   .lang-switcher {
@@ -1278,6 +1288,10 @@ section {
   .footer-content {
     grid-template-columns: 1fr 1fr;
   }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1285,9 +1299,35 @@ section {
     --container-padding: 1rem;
   }
 
+  section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .section-title {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .hero-content {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+  }
+
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-text {
+    font-size: 1.05rem;
+  }
+
   .hero-stats {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
+  }
+
+  .hero-stat-value {
+    font-size: 1.6rem;
   }
 
   .products-grid {
@@ -1298,9 +1338,28 @@ section {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .pricing-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .pricing-table {
+    min-width: 480px;
+  }
+
   .pricing-table th,
   .pricing-table td {
     padding: 0.75rem 0.8rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+
+  .pricing-tabs {
+    gap: var(--space-xs);
+  }
+
+  .pricing-tab {
+    padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
 
@@ -1325,12 +1384,7 @@ section {
 
   .btn {
     justify-content: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .gallery-grid {
-    grid-template-columns: 1fr;
+    min-height: 48px;
   }
 
   .features-grid {
@@ -1339,6 +1393,126 @@ section {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: var(--space-xl);
+  }
+
+  .service-card {
+    padding: var(--space-xl);
+  }
+
+  .contact-form {
+    padding: var(--space-xl);
+  }
+
+  /* Lightbox mobile */
+  .lightbox-prev,
+  .lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .lightbox img {
+    max-width: 95%;
+    max-height: 80vh;
+  }
+
+  .construction-image img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+  }
+
+  .hero-stat-value {
+    font-size: 1.4rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  .product-info {
+    padding: var(--space-lg);
+  }
+
+  .product-price-current {
+    font-size: 1.4rem;
+  }
+
+  .lang-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .nav-logo span {
+    font-size: 0.95rem;
+  }
+
+  .nav-logo-img {
+    height: 32px;
+  }
+
+  .faq-question {
+    padding: var(--space-lg);
+    font-size: 0.9rem;
+  }
+
+  .faq-answer {
+    padding: 0 var(--space-lg) var(--space-lg);
+    font-size: 0.9rem;
+  }
+
+  .lightbox {
+    padding: var(--space-sm);
+  }
+
+  .lightbox img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: var(--radius-sm);
+  }
+
+  .lightbox-prev {
+    left: 4px;
+  }
+
+  .lightbox-next {
+    right: 4px;
   }
 }
 
@@ -1820,6 +1994,12 @@ section {
     height: 56px;
     font-size: 1rem;
   }
+  .assembly-step {
+    gap: var(--space-md);
+  }
+  .assembly-step-content {
+    padding: var(--space-lg);
+  }
   .assembly-cta-box {
     padding: var(--space-xl);
     flex-direction: column;
@@ -1844,5 +2024,44 @@ section {
     right: 20px;
     width: 44px;
     height: 44px;
+  }
+  .contact-info-card {
+    padding: var(--space-lg);
+  }
+  .contact-map iframe {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assembly-steps::before {
+    left: 20px;
+  }
+  .assembly-step-num {
+    width: 40px;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+  .assembly-step {
+    gap: var(--space-sm);
+  }
+  .assembly-step-content {
+    padding: var(--space-md);
+  }
+  .assembly-step-content h3 {
+    font-size: 1.05rem;
+  }
+  .assembly-cta-box {
+    padding: var(--space-lg);
+  }
+  .history-stat-value {
+    font-size: 1.6rem;
+  }
+  .badge-3c {
+    padding: var(--space-lg);
+  }
+  .contact-info-card {
+    padding: var(--space-md);
+    gap: var(--space-md);
   }
 }
