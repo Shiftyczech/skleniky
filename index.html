@@ -37,15 +37,16 @@
     <meta name="twitter:image" content="https://www.sklenikytobias.cz/images/reference/re11.jpg" />
 
     <title>Skleníky Tobiáš – Šroubované skleníky pro beztmelé zasklení</title>
+    <link rel="preload" as="image" type="image/webp" href="images/reference/re11.webp" fetchpriority="high" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="images/logo_tobias.png" type="image/png" />
+    <link rel="icon" href="images/logo_tobias.webp" type="image/webp" />
   </head>
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
       <div class="container">
         <a href="#hero" class="nav-logo">
-          <img src="images/logo_tobias.png" alt="Skleníky Tobiáš" class="nav-logo-img" />
+          <img src="images/logo_tobias.webp" alt="Skleníky Tobiáš" class="nav-logo-img" width="289" height="249" />
           <span data-i18n="nav.logo">Skleníky Tobiáš</span>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -76,7 +77,10 @@
     <!-- HERO -->
     <section class="hero" id="hero">
       <div class="hero-bg">
-        <img src="images/reference/re11.jpg" alt="Skleník v zahradě" loading="eager" />
+        <picture>
+          <source srcset="images/reference/re11.webp" type="image/webp" />
+          <img src="images/reference/re11.jpg" alt="Skleník v zahradě" loading="eager" fetchpriority="high" width="1000" height="716" />
+        </picture>
       </div>
       <div class="hero-overlay"></div>
       <div class="container">
@@ -224,11 +228,16 @@
         <div class="products-grid">
           <div class="product-card reveal">
             <div class="product-image">
-              <img
-                src="images/central_old.jpg"
-                alt="Skleník CENTRÁL"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/central_old.webp" type="image/webp" />
+                <img
+                  src="images/central_old.jpg"
+                  alt="Skleník CENTRÁL"
+                  loading="lazy"
+                  width="800" height="600"
+                  decoding="async"
+                />
+              </picture>
               <span class="product-badge" data-i18n="products.badge_compact">Kompaktní</span>
             </div>
             <div class="product-info">
@@ -264,11 +273,16 @@
 
           <div class="product-card reveal">
             <div class="product-image">
-              <img
-                src="images/optimal_old.jpg"
-                alt="Skleník OPTIMÁL"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/optimal_old.webp" type="image/webp" />
+                <img
+                  src="images/optimal_old.jpg"
+                  alt="Skleník OPTIMÁL"
+                  loading="lazy"
+                  width="800" height="567"
+                  decoding="async"
+                />
+              </picture>
               <span class="product-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" style="vertical-align: middle; margin-right: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span data-i18n="products.badge_popular">Oblíbený</span></span>
             </div>
             <div class="product-info">
@@ -304,11 +318,16 @@
 
           <div class="product-card reveal">
             <div class="product-image">
-              <img
-                src="images/maximal_old.jpg"
-                alt="Skleník MAXIMÁL"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/maximal_old.webp" type="image/webp" />
+                <img
+                  src="images/maximal_old.jpg"
+                  alt="Skleník MAXIMÁL"
+                  loading="lazy"
+                  width="800" height="600"
+                  decoding="async"
+                />
+              </picture>
               <span class="product-badge" data-i18n="products.badge_spacious">Prostorný</span>
             </div>
             <div class="product-info">
@@ -344,11 +363,16 @@
 
           <div class="product-card reveal">
             <div class="product-image">
-              <img
-                src="images/satelit24_old.jpg"
-                alt="Skleník SATELIT 2"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/satelit24_old.webp" type="image/webp" />
+                <img
+                  src="images/satelit24_old.jpg"
+                  alt="Skleník SATELIT 2"
+                  loading="lazy"
+                  width="709" height="735"
+                  decoding="async"
+                />
+              </picture>
               <span class="product-badge" data-i18n="products.badge_leanto">Přístavba</span>
             </div>
             <div class="product-info">
@@ -384,11 +408,16 @@
 
           <div class="product-card reveal">
             <div class="product-image">
-              <img
-                src="images/satelit_old.jpg"
-                alt="Skleník SATELIT 2.4"
-                loading="lazy"
-              />
+              <picture>
+                <source srcset="images/satelit_old.webp" type="image/webp" />
+                <img
+                  src="images/satelit_old.jpg"
+                  alt="Skleník SATELIT 2.4"
+                  loading="lazy"
+                  width="800" height="600"
+                  decoding="async"
+                />
+              </picture>
               <span class="product-badge" data-i18n="products.badge_leanto_xl">Přístavba XL</span>
             </div>
             <div class="product-info">
@@ -437,7 +466,10 @@
         </div>
         <div class="construction-grid">
           <div class="construction-image reveal">
-            <img src="images/reference/re05.jpg" alt="Detail konstrukce skleníku" />
+            <picture>
+              <source srcset="images/reference/re05.webp" type="image/webp" />
+              <img src="images/reference/re05.jpg" alt="Detail konstrukce skleníku" loading="lazy" width="1000" height="747" decoding="async" />
+            </picture>
           </div>
           <div class="construction-features">
             <div class="construction-feature reveal">
@@ -873,8 +905,14 @@
               </div>
             </div>
             <div class="history-img-grid">
-              <img src="images/reference/re01.jpg" alt="Skleník Tobiáš realizace" loading="lazy" />
-              <img src="images/reference/re03.jpg" alt="Skleník na zahradě" loading="lazy" />
+              <picture>
+                <source srcset="images/reference/re01.webp" type="image/webp" />
+                <img src="images/reference/re01.jpg" alt="Skleník Tobiáš realizace" loading="lazy" width="1000" height="1333" decoding="async" />
+              </picture>
+              <picture>
+                <source srcset="images/reference/re03.webp" type="image/webp" />
+                <img src="images/reference/re03.jpg" alt="Skleník na zahradě" loading="lazy" width="1000" height="747" decoding="async" />
+              </picture>
             </div>
           </div>
         </div>
@@ -890,181 +928,291 @@
         </div>
         <div class="gallery-grid reveal">
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re01.jpg"
-              alt="Realizace skleníku 1"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re01.webp" type="image/webp" />
+              <img
+                src="images/reference/re01.jpg"
+                alt="Realizace skleníku 1"
+                loading="lazy"
+                width="1000" height="1333"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay">
               <span data-i18n="gallery.cap_realization">Realizace skleníku</span>
             </div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re02.jpg"
-              alt="Realizace skleníku 2"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re02.webp" type="image/webp" />
+              <img
+                src="images/reference/re02.jpg"
+                alt="Realizace skleníku 2"
+                loading="lazy"
+                width="1000" height="809"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_customer">Skleník u zákazníka</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re03.jpg"
-              alt="Realizace skleníku 3"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re03.webp" type="image/webp" />
+              <img
+                src="images/reference/re03.jpg"
+                alt="Realizace skleníku 3"
+                loading="lazy"
+                width="1000" height="747"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_garden">Zahradní skleník</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re04.jpg"
-              alt="Realizace skleníku 4"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re04.webp" type="image/webp" />
+              <img
+                src="images/reference/re04.jpg"
+                alt="Realizace skleníku 4"
+                loading="lazy"
+                width="1000" height="759"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_garden2">Realizace na zahradě</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re05.jpg"
-              alt="Realizace skleníku 5"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re05.webp" type="image/webp" />
+              <img
+                src="images/reference/re05.jpg"
+                alt="Realizace skleníku 5"
+                loading="lazy"
+                width="1000" height="747"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_running">Skleník v provozu</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re06.jpg"
-              alt="Realizace skleníku 6"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re06.webp" type="image/webp" />
+              <img
+                src="images/reference/re06.jpg"
+                alt="Realizace skleníku 6"
+                loading="lazy"
+                width="1000" height="747"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_detail">Detail konstrukce</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re07.jpg"
-              alt="Realizace skleníku 7"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re07.webp" type="image/webp" />
+              <img
+                src="images/reference/re07.jpg"
+                alt="Realizace skleníku 7"
+                loading="lazy"
+                width="1000" height="761"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_happy">Spokojený zákazník</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re08.jpg"
-              alt="Realizace skleníku 8"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re08.webp" type="image/webp" />
+              <img
+                src="images/reference/re08.jpg"
+                alt="Realizace skleníku 8"
+                loading="lazy"
+                width="1000" height="924"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_leanto">Přístěnný skleník</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re09.jpg"
-              alt="Realizace skleníku 9"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re09.webp" type="image/webp" />
+              <img
+                src="images/reference/re09.jpg"
+                alt="Realizace skleníku 9"
+                loading="lazy"
+                width="1000" height="851"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_plot">Skleník na pozemku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re10.jpg"
-              alt="Realizace skleníku 10"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re10.webp" type="image/webp" />
+              <img
+                src="images/reference/re10.jpg"
+                alt="Realizace skleníku 10"
+                loading="lazy"
+                width="1000" height="731"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_glazing">Kvalitní zasklení</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re11.jpg"
-              alt="Realizace skleníku 11"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re11.webp" type="image/webp" />
+              <img
+                src="images/reference/re11.jpg"
+                alt="Realizace skleníku 11"
+                loading="lazy"
+                width="1000" height="716"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_winter">Skleník v zimě</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re12.jpg"
-              alt="Realizace skleníku 12"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re12.webp" type="image/webp" />
+              <img
+                src="images/reference/re12.jpg"
+                alt="Realizace skleníku 12"
+                loading="lazy"
+                width="1000" height="747"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_profile">Detail profilu</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re13.jpg"
-              alt="Realizace skleníku 13"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re13.webp" type="image/webp" />
+              <img
+                src="images/reference/re13.jpg"
+                alt="Realizace skleníku 13"
+                loading="lazy"
+                width="1000" height="1222"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re14.jpg"
-              alt="Realizace skleníku 14"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re14.webp" type="image/webp" />
+              <img
+                src="images/reference/re14.jpg"
+                alt="Realizace skleníku 14"
+                loading="lazy"
+                width="1000" height="911"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re15.jpg"
-              alt="Realizace skleníku 15"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re15.webp" type="image/webp" />
+              <img
+                src="images/reference/re15.jpg"
+                alt="Realizace skleníku 15"
+                loading="lazy"
+                width="1000" height="1338"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re16.jpg"
-              alt="Realizace skleníku 16"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re16.webp" type="image/webp" />
+              <img
+                src="images/reference/re16.jpg"
+                alt="Realizace skleníku 16"
+                loading="lazy"
+                width="1000" height="747"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re17.jpg"
-              alt="Realizace skleníku 17"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re17.webp" type="image/webp" />
+              <img
+                src="images/reference/re17.jpg"
+                alt="Realizace skleníku 17"
+                loading="lazy"
+                width="1000" height="750"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re18.jpg"
-              alt="Realizace skleníku 18"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re18.webp" type="image/webp" />
+              <img
+                src="images/reference/re18.jpg"
+                alt="Realizace skleníku 18"
+                loading="lazy"
+                width="1000" height="1333"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re19.jpg"
-              alt="Realizace skleníku 19"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re19.webp" type="image/webp" />
+              <img
+                src="images/reference/re19.jpg"
+                alt="Realizace skleníku 19"
+                loading="lazy"
+                width="1000" height="682"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re20.jpg"
-              alt="Realizace skleníku 20"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re20.webp" type="image/webp" />
+              <img
+                src="images/reference/re20.jpg"
+                alt="Realizace skleníku 20"
+                loading="lazy"
+                width="636" height="381"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re21.jpg"
-              alt="Realizace skleníku 21"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re21.webp" type="image/webp" />
+              <img
+                src="images/reference/re21.jpg"
+                alt="Realizace skleníku 21"
+                loading="lazy"
+                width="1000" height="1333"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
           <div class="gallery-item" onclick="openLightbox(this)">
-            <img
-              src="images/reference/re27.jpg"
-              alt="Realizace skleníku 27"
-              loading="lazy"
-            />
+            <picture>
+              <source srcset="images/reference/re27.webp" type="image/webp" />
+              <img
+                src="images/reference/re27.jpg"
+                alt="Realizace skleníku 27"
+                loading="lazy"
+                width="658" height="771"
+                decoding="async"
+              />
+            </picture>
             <div class="gallery-item-overlay"><span data-i18n="gallery.cap_realization">Realizace skleníku</span></div>
           </div>
         </div>
@@ -1291,7 +1439,7 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-brand">
-            <h3><img src="images/logo_tobias.png" alt="Logo" style="height: 28px; vertical-align: middle; margin-right: 8px;">Skleníky Tobiáš</h3>
+            <h3><img src="images/logo_tobias.webp" alt="Logo" style="height: 28px; vertical-align: middle; margin-right: 8px;">Skleníky Tobiáš</h3>
             <p data-i18n="footer.brand_text">
               Kvalitní šroubované skleníky za nejlepší ceny na českém trhu.
               Firma Daniel Tobiáš – Váš spolehlivý partner pro pěstování.
