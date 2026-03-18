@@ -52,12 +52,15 @@
           <li><a href="#about" class="nav-link">O nás</a></li>
           <li><a href="#products" class="nav-link">Skleníky</a></li>
           <li><a href="#construction" class="nav-link">Konstrukce</a></li>
+          <li><a href="#assembly" class="nav-link">Montáž</a></li>
           <li><a href="#pricing" class="nav-link">Ceník</a></li>
           <li><a href="#services" class="nav-link">Služby</a></li>
+          <li><a href="#history" class="nav-link">O firmě</a></li>
           <li><a href="#gallery" class="nav-link">Galerie</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#contact" class="nav-link">Kontakt</a></li>
         </ul>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -95,7 +98,11 @@
             </div>
             <div>
               <div class="hero-stat-value">1 700 Kč</div>
-              <div class="hero-stat-label">Doprava po celé ČR</div>
+              <div class="hero-stat-label">Doprava – paušál po ČR</div>
+            </div>
+            <div>
+              <div class="hero-stat-value">od 1926</div>
+              <div class="hero-stat-label">Rodinná tradice</div>
             </div>
             <div>
               <div class="hero-stat-value">4 mm</div>
@@ -115,6 +122,36 @@
             Naše skleníky mají oproti konkurenci pevnější konstrukci a přitom
             patří k nejlevnějším na trhu.
           </p>
+        </div>
+        <!-- Badge 3Č -->
+        <div class="czech-badge-row reveal">
+          <div class="czech-badge">
+            <div class="czech-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="czech-badge-text">
+              <strong>Český výrobek</strong>
+              <span>Český dodavatel · Česká kvalita</span>
+            </div>
+          </div>
+          <div class="czech-badge">
+            <div class="czech-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="czech-badge-text">
+              <strong>Rodinná firma od roku 1926</strong>
+              <span>Sklenářství Tobiáš – přes 95 let zkušeností</span>
+            </div>
+          </div>
+          <div class="czech-badge">
+            <div class="czech-badge-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="czech-badge-text">
+              <strong>Bezkonkurenční ceny</strong>
+              <span>Nejlevnější skleníky na českém trhu</span>
+            </div>
+          </div>
         </div>
         <div class="features-grid">
           <div class="feature-card reveal">
@@ -304,18 +341,18 @@
             <div class="product-image">
               <img
                 src="images/satelit_old.jpg"
-                alt="Skleník SATELIT"
+                alt="Skleník SATELIT 2"
                 loading="lazy"
               />
               <span class="product-badge">Přístavba</span>
             </div>
             <div class="product-info">
-              <div class="product-name">SATELIT</div>
+              <div class="product-name">SATELIT 2</div>
               <p class="product-desc">
                 Přístěnný model pro přistavění ke zdi domu. Kompaktní řešení,
-                které šetří místo na zahradě. Ve dvou variantách šířky.
+                které šetří místo na zahradě.
               </p>
-              <div class="product-specs" style="margin-bottom: 0.5rem">
+              <div class="product-specs">
                 <div class="product-spec">
                   <div class="product-spec-value">2,0 m</div>
                   <div class="product-spec-label">Šířka</div>
@@ -329,11 +366,33 @@
                   <div class="product-spec-label">Dveře</div>
                 </div>
               </div>
-              <div class="product-price" style="margin-bottom: 0.75rem">
-                <span class="product-price-current" style="font-size: 1.2rem">SATELIT 2 — od 11 500 Kč</span>
+              <div class="product-price">
+                <span class="product-price-current">11 500 Kč</span>
+                <span class="product-price-old">11 950 Kč</span>
                 <span class="product-price-unit">vč. DPH</span>
               </div>
-              <div class="product-specs" style="margin-bottom: 0.5rem">
+              <a href="#contact" class="btn btn-primary" style="width: 100%"
+                >Nezávazná poptávka</a
+              >
+            </div>
+          </div>
+
+          <div class="product-card reveal">
+            <div class="product-image">
+              <img
+                src="images/satelit_old.jpg"
+                alt="Skleník SATELIT 2.4"
+                loading="lazy"
+              />
+              <span class="product-badge">Přístavba XL</span>
+            </div>
+            <div class="product-info">
+              <div class="product-name">SATELIT 2.4</div>
+              <p class="product-desc">
+                Širší přístěnný model s větším prostorem. Ideální pro náročnější
+                pěstitele s menší zahradou.
+              </p>
+              <div class="product-specs">
                 <div class="product-spec">
                   <div class="product-spec-value">2,4 m</div>
                   <div class="product-spec-label">Šířka</div>
@@ -348,7 +407,8 @@
                 </div>
               </div>
               <div class="product-price">
-                <span class="product-price-current" style="font-size: 1.2rem">SATELIT 2.4 — od 14 000 Kč</span>
+                <span class="product-price-current">14 000 Kč</span>
+                <span class="product-price-old">14 650 Kč</span>
                 <span class="product-price-unit">vč. DPH</span>
               </div>
               <a href="#contact" class="btn btn-primary" style="width: 100%"
@@ -425,6 +485,61 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONTÁŽ -->
+    <section id="assembly" class="section-light">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Montáž skleníku</h2>
+          <p>
+            Skleník Tobiáš je jako dětská skládačka – zvládnete ho sami
+            nebo vám rádi pomůžeme.
+          </p>
+        </div>
+        <div class="assembly-steps">
+          <div class="assembly-step reveal">
+            <div class="assembly-step-num">01</div>
+            <div class="assembly-step-content">
+              <h3>Příprava základu</h3>
+              <p>Skleník lze osadit na betonové zdi, dřevěné trámy, betonové patky nebo speciální kovový základový rám z 3mm oceli (práškově lakovaný). Základ musí být vodorovný a pevný.</p>
+            </div>
+          </div>
+          <div class="assembly-step reveal">
+            <div class="assembly-step-num">02</div>
+            <div class="assembly-step-content">
+              <h3>Sestavení nosné konstrukce</h3>
+              <p>Profily z pozinkovaného plechu (1,3 mm) se spojují šrouby a maticemi. Žádné svařování ani tmelení – stačí šroubovák a klíč. Postup je přehledně popsán v návodu.</p>
+            </div>
+          </div>
+          <div class="assembly-step reveal">
+            <div class="assembly-step-num">03</div>
+            <div class="assembly-step-content">
+              <h3>Zasklení</h3>
+              <p>Skla síly 4 mm se vkládají do profilů a zajišťují speciálními svorkami – bez tmelení. Výměna poškozeného skla je pak velmi snadná.</p>
+            </div>
+          </div>
+          <div class="assembly-step reveal">
+            <div class="assembly-step-num">04</div>
+            <div class="assembly-step-content">
+              <h3>Montáž dveří a doplňků</h3>
+              <p>Nakonec se osadí dveřní křídlo (světlá šířka 62 cm – pohodlný průjezd kolečkem), větrací okno a případné příslušenství jako kapková závlaha nebo automatický otvírač oken.</p>
+            </div>
+          </div>
+        </div>
+        <div class="assembly-cta reveal">
+          <div class="assembly-cta-box">
+            <div class="assembly-cta-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <h3>Nechcete montovat sami?</h3>
+              <p>Zajistíme kompletní montáž přímo na Vašem pozemku. Cena dle velikosti a vzdálenosti – individuální dohoda.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary">Poptat montáž →</a>
           </div>
         </div>
       </div>
@@ -642,8 +757,8 @@
         </div>
 
         <p class="pricing-note reveal">
-          Ceny jsou orientační. Přesnou cenu Vám sdělíme po upřesnění Vašich
-          požadavků. Skleníky lze prodloužit po 1 metru za příplatek.
+          Ceny jsou orientační a platné od 1. 2. 2025, vč. skla a 21% DPH. Přesnou cenu Vám sdělíme po upřesnění požadavků.
+          <br/>Skleníky lze prodloužit po 1 metru – CENTRÁL/OPTIMÁL <strong style="color:var(--green-300)">+4 550 Kč/m</strong>, MAXIMÁL <strong style="color:var(--green-300)">+5 550 Kč/m</strong>.
         </p>
       </div>
     </section>
@@ -664,7 +779,7 @@
             <h3>Doprava po celé ČR</h3>
             <p>
               Vlastní doprava kamkoli po České republice. Dodací lhůta 2–6 týdnů
-              dle sezóny. Osobní odběr možný v Nymburku.
+              dle sezóny. Osobní odběr možný v Nymburce.
             </p>
             <div class="service-price">1 700 Kč paušál</div>
           </div>
@@ -694,6 +809,68 @@
               výměny. Profesionální sklenářské služby.
             </p>
             <div class="service-price">Na dotaz</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIE / SKLENÁŘSTVÍ -->
+    <section id="history" class="section-green">
+      <div class="container">
+        <div class="history-grid">
+          <div class="history-text reveal">
+            <div class="history-label">Rodinná tradice</div>
+            <h2>Sklenářství Tobiáš<br/>od roku 1926</h2>
+            <p>
+              Firma Daniel Tobiáš navazuje na dlouholetou rodinnou tradici sklenářského řemesla,
+              která sahá až do roku 1926. Přes devadesát let zkušeností a znalosti materiálů
+              nám umožňují nabízet skleníky špičkové kvality za bezkonkurenční ceny.
+            </p>
+            <p>
+              Kromě skleníků provozujeme kompletní <strong>sklenářství</strong> – řezání,
+              broušení a vrtání skla na míru, náhradní skla pro opravy a výměny.
+              Vše pod jednou střechou v Nymburce.
+            </p>
+            <div class="history-stats">
+              <div class="history-stat">
+                <div class="history-stat-value">1926</div>
+                <div class="history-stat-label">Rok založení</div>
+              </div>
+              <div class="history-stat">
+                <div class="history-stat-value">95+</div>
+                <div class="history-stat-label">Let zkušeností</div>
+              </div>
+              <div class="history-stat">
+                <div class="history-stat-value">ČR</div>
+                <div class="history-stat-label">Český výrobce</div>
+              </div>
+            </div>
+          </div>
+          <div class="history-badges reveal">
+            <div class="badge-3c">
+              <div class="badge-3c-emblem">
+                <span class="badge-3c-title">3Č</span>
+                <span class="badge-3c-sub">Certifikát</span>
+              </div>
+              <div class="badge-3c-items">
+                <div class="badge-3c-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  Český výrobek
+                </div>
+                <div class="badge-3c-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+                  Český dodavatel
+                </div>
+                <div class="badge-3c-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"/></svg>
+                  Česká kvalita
+                </div>
+              </div>
+            </div>
+            <div class="history-img-grid">
+              <img src="images/reference/re01.jpg" alt="Skleník Tobiáš realizace" loading="lazy" />
+              <img src="images/reference/re03.jpg" alt="Skleník na zahradě" loading="lazy" />
+            </div>
           </div>
         </div>
       </div>
@@ -809,6 +986,81 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section-light">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Časté dotazy</h2>
+          <p>Odpovědi na nejčastěji kladené otázky ohledně skleníků Tobiáš.</p>
+        </div>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Jsou skleníky dodávány i se sklem?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ano, ceny v ceníku jsou uváděny <strong>včetně skla</strong> a 21% DPH. Skla jsou zahradnická, síly 4 mm – buď čirá, nebo rozptylová Helios pro rovnoměrné osvětlení rostlin.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Jak dlouho trvá dodání skleníku?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Dodací lhůta je <strong>2–6 týdnů</strong> v závislosti na sezóně. V jarních měsících (březen–květen) bývá poptávka nejvyšší a lhůty delší. Přesný termín upřesníme při objednávce.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Mohu si nechat skleník prodloužit?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ano, všechny modely lze prodloužit o <strong>1 metr</strong> nebo násobek. Příplatek za každý metr délky je u modelů CENTRÁL/OPTIMÁL cca 4 550 Kč/m a u MAXIMÁLU cca 5 550 Kč/m (vč. DPH).</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Je montáž skleníku složitá?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Skleník Tobiáš je navržen jako jednoduchá <strong>stavebnice</strong> – vše se spojuje šrouby a maticemi, bez svařování a bez tmelení. Průměrný zákazník zvládne montáž menšího modelu za jeden den s pomocí druhé osoby. Samozřejmě nabízíme i <a href="#contact">profesionální montáž</a>.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Jaký základ skleník potřebuje?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Skleník lze osadit na <strong>betonové zdi, dřevěné trámy nebo betonové patky</strong>. Nabízíme také speciální kovový základový rám z 3mm oceli (práškově lakovaný) – viz ceník základových rámů.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Jaká je cena dopravy?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Doprava je paušální – <strong>1 700 Kč</strong> kamkoli po České republice. Osobní odběr je možný zdarma v Nymburce.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Nabízíte náhradní skla?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ano, jako sklenářství poskytujeme <strong>náhradní skla</strong> pro opravy i výměny. Díky beztmelému systému uchycení zvládnete výměnu skla sami bez odborné pomoci.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- KONTAKT -->
     <section id="contact" class="section-light">
       <div class="container">
@@ -857,24 +1109,29 @@
                 <p>64729338</p>
               </div>
             </div>
-            <div class="contact-info-card">
-              <div class="contact-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green-700)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-              <div>
-                <h4>Jak nás najdete</h4>
-                <p>
-                  <a
-                    href="https://mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
-                    target="_blank"
-                    rel="noopener"
-                    >Zobrazit na mapě →</a
-                  >
-                </p>
-              </div>
+            <!-- Vložená mapa -->
+            <div class="contact-map">
+              <iframe
+                src="https://frame.mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=16&source=firm&id=13195262"
+                width="100%"
+                height="220"
+                style="border:0; border-radius: 12px;"
+                allowfullscreen
+                loading="lazy"
+                title="Poloha firmy Daniel Tobiáš na mapě"
+              ></iframe>
+              <a
+                href="https://mapy.cz/zakladni?x=15.0443220&y=50.1911050&z=17&source=firm&id=13195262"
+                target="_blank"
+                rel="noopener"
+                class="map-link"
+              >Otevřít v Mapách →</a>
             </div>
           </div>
           <div class="contact-form reveal">
             <h3>Nezávazná poptávka</h3>
-            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <p class="form-note">Formulář nás osloví přímo – zavoláme zpět do 1–2 pracovních dnů.</p>
+            <form id="contactForm">
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Jméno a příjmení *</label>
@@ -910,11 +1167,11 @@
                 <label for="model">Typ skleníku</label>
                 <select id="model" name="model">
                   <option value="">Vyberte model...</option>
-                  <option value="central">CENTRÁL (š. 2,0 m)</option>
-                  <option value="optimal">OPTIMÁL (š. 2,5 m)</option>
-                  <option value="maximal">MAXIMÁL (š. 3,0 m)</option>
-                  <option value="satelit2">SATELIT 2 (š. 2,0 m)</option>
-                  <option value="satelit24">SATELIT 2.4 (š. 2,4 m)</option>
+                  <option value="CENTRÁL (š. 2,0 m)">CENTRÁL (š. 2,0 m)</option>
+                  <option value="OPTIMÁL (š. 2,5 m)">OPTIMÁL (š. 2,5 m)</option>
+                  <option value="MAXIMÁL (š. 3,0 m)">MAXIMÁL (š. 3,0 m)</option>
+                  <option value="SATELIT 2 (š. 2,0 m)">SATELIT 2 (š. 2,0 m)</option>
+                  <option value="SATELIT 2.4 (š. 2,4 m)">SATELIT 2.4 (š. 2,4 m)</option>
                 </select>
               </div>
               <div class="form-group">
@@ -922,12 +1179,18 @@
                 <textarea
                   id="message"
                   name="message"
-                  placeholder="Popište Vaše požadavky – rozměr, doplňky, dotazy..."
+                  placeholder="Popište Vaše požadavky – rozměr, délka, doplňky, dotazy..."
                 ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary" style="width: 100%">
+              <button type="submit" class="btn btn-primary" style="width: 100%" id="submitBtn">
                 Odeslat poptávku →
               </button>
+              <div id="formSuccess" class="form-success" style="display:none">
+                ✅ Poptávka odeslána! Ozveme se Vám brzy.
+              </div>
+              <div id="formError" class="form-error" style="display:none">
+                ❌ Něco se pokazilo. Zkuste nám napsat přímo na <a href="mailto:info@sklenikytobias.cz">info@sklenikytobias.cz</a>
+              </div>
             </form>
           </div>
         </div>
@@ -978,12 +1241,16 @@
       </div>
     </footer>
 
+    <!-- SCROLL TO TOP -->
+    <button class="scroll-top" id="scrollTop" aria-label="Nahoru">↑</button>
+
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox" onclick="closeLightbox()">
       <button class="lightbox-close" aria-label="Zavřít">&times;</button>
       <img src="" alt="Zvětšený obrázek" id="lightboxImg" />
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 
     <!-- Structured Data -->

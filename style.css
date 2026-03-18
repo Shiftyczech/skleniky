@@ -1235,3 +1235,508 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== CZECH BADGE ROW ===== */
+.czech-badge-row {
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.czech-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--white);
+  border: 2px solid var(--green-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+  flex: 1;
+  min-width: 220px;
+}
+
+.czech-badge:hover {
+  border-color: var(--green-400);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.czech-badge-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.czech-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.czech-badge-text strong {
+  font-size: 0.95rem;
+  color: var(--green-800);
+  margin-bottom: 2px;
+}
+
+.czech-badge-text span {
+  font-size: 0.8rem;
+  color: var(--gray-700);
+}
+
+/* ===== ASSEMBLY / MONTÁŽ ===== */
+.assembly-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.assembly-steps::before {
+  content: "";
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green-300), var(--green-100));
+}
+
+.assembly-step {
+  display: flex;
+  gap: var(--space-xl);
+  align-items: flex-start;
+  position: relative;
+}
+
+.assembly-step-num {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, var(--green-600), var(--green-800));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.assembly-step-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  flex: 1;
+  transition: all var(--transition-base);
+}
+
+.assembly-step-content:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--green-200);
+}
+
+.assembly-step-content h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--green-800);
+}
+
+.assembly-step-content p {
+  color: var(--gray-700);
+  font-size: 0.95rem;
+}
+
+.assembly-cta {
+  margin-top: var(--space-xl);
+}
+
+.assembly-cta-box {
+  background: linear-gradient(135deg, var(--green-100), var(--green-50));
+  border: 2px solid var(--green-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl) var(--space-3xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.assembly-cta-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.assembly-cta-box > div {
+  flex: 1;
+}
+
+.assembly-cta-box h3 {
+  margin-bottom: var(--space-sm);
+  color: var(--green-800);
+}
+
+.assembly-cta-box p {
+  color: var(--gray-700);
+}
+
+/* ===== HISTORY / SKLENÁŘSTVÍ ===== */
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+.history-label {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--green-300);
+  padding: 0.3rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.history-text h2 {
+  color: var(--white);
+  margin-bottom: var(--space-xl);
+}
+
+.history-text p {
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-lg);
+  font-size: 1rem;
+}
+
+.history-stats {
+  display: flex;
+  gap: var(--space-2xl);
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.history-stat-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-300);
+}
+
+.history-stat-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2px;
+}
+
+.history-badges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.badge-3c {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  backdrop-filter: blur(10px);
+}
+
+.badge-3c-emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.05)
+  );
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+}
+
+.badge-3c-title {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1;
+}
+
+.badge-3c-sub {
+  font-size: 0.65rem;
+  color: var(--green-300);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-3c-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.badge-3c-item {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+.history-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.history-img-grid img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base);
+}
+
+.faq-item.open {
+  box-shadow: var(--shadow-md);
+  border-color: var(--green-300);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-xl);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  text-align: left;
+  transition: background var(--transition-fast);
+  gap: var(--space-md);
+}
+
+.faq-question:hover {
+  background: var(--green-50);
+}
+
+.faq-item.open .faq-question {
+  background: var(--green-50);
+  color: var(--green-800);
+}
+
+.faq-icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--green-600);
+  flex-shrink: 0;
+  transition: transform var(--transition-base);
+  line-height: 1;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 var(--space-xl) var(--space-xl);
+  color: var(--gray-700);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-top: 1px solid var(--gray-200);
+}
+
+.faq-answer p {
+  padding-top: var(--space-lg);
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+/* ===== SCROLL TO TOP ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--green-500), var(--green-700));
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.4);
+  z-index: 999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+}
+
+/* ===== CONTACT MAP ===== */
+.contact-map {
+  margin-top: var(--space-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.map-link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--green-700);
+  font-weight: 500;
+}
+
+.map-link:hover {
+  color: var(--green-500);
+}
+
+/* ===== FORM SUCCESS/ERROR ===== */
+.form-note {
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--green-50);
+  border-left: 3px solid var(--green-500);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.form-success {
+  margin-top: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--green-50);
+  border: 1px solid var(--green-300);
+  border-radius: var(--radius-sm);
+  color: var(--green-800);
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-error {
+  margin-top: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: #fff3f3;
+  border: 1px solid #f48fb1;
+  border-radius: var(--radius-sm);
+  color: #c62828;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-error a {
+  color: #c62828;
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE - NEW SECTIONS ===== */
+@media (max-width: 1024px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+  .history-badges {
+    order: -1;
+  }
+  .history-img-grid {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .assembly-steps::before {
+    left: 28px;
+  }
+  .assembly-step-num {
+    width: 56px;
+    height: 56px;
+    font-size: 1rem;
+  }
+  .assembly-cta-box {
+    padding: var(--space-xl);
+    flex-direction: column;
+    text-align: center;
+  }
+  .history-stats {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  .badge-3c {
+    flex-direction: column;
+    text-align: center;
+  }
+  .czech-badge-row {
+    flex-direction: column;
+  }
+  .czech-badge {
+    min-width: unset;
+  }
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+}
