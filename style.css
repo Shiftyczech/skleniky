@@ -1760,6 +1760,7 @@ section {
   padding: var(--space-xl) var(--space-2xl);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xl);
   backdrop-filter: blur(10px);
 }
