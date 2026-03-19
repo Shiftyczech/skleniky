@@ -345,7 +345,7 @@ h4 {
 .product-image picture,
 .construction-image picture,
 .gallery-item picture,
-.history-img-grid picture {
+.certificate-showcase picture {
   display: contents;
 }
 
@@ -1816,19 +1816,104 @@ section {
 }
 
 
-.history-img-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-md);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+/* ===== CERTIFICATE SHOWCASE ===== */
+.certificate-showcase {
+  margin-top: var(--space-xl);
 }
 
-.history-img-grid img {
+.certificate-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  backdrop-filter: blur(12px);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.certificate-card:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15), 0 0 60px rgba(212, 175, 55, 0.05);
+  transform: translateY(-4px);
+}
+
+.certificate-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 40%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.certificate-card:hover .certificate-glow {
+  opacity: 1.5;
+}
+
+.certificate-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), inset 0 0 30px rgba(212, 175, 55, 0.05);
+  background: linear-gradient(135deg, rgba(30, 25, 10, 0.6), rgba(20, 15, 5, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.certificate-frame img {
   width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+.certificate-card:hover .certificate-frame img {
+  transform: scale(1.03);
+}
+
+.certificate-info {
+  text-align: center;
+  padding-top: var(--space-sm);
+}
+
+.certificate-year {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #d4af37;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.2rem 0.9rem;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-sm);
+  letter-spacing: 1px;
+}
+
+.certificate-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: var(--space-xs);
+  line-height: 1.3;
+}
+
+.certificate-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+  margin: 0;
 }
 
 /* ===== FAQ ===== */
@@ -2024,8 +2109,8 @@ section {
   .history-badges {
     order: -1;
   }
-  .history-img-grid {
-    display: none;
+  .certificate-showcase {
+    order: 0;
   }
 }
 

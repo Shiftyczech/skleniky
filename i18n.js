@@ -175,6 +175,8 @@ const translations = {
     "history.badge_item1": "Český výrobek",
     "history.badge_item2": "Český dodavatel",
     "history.badge_item3": "Česká kvalita",
+    "history.cert_title": "Diplom s právem ražení stříbrné medaile",
+    "history.cert_text": "Uděleno firmě J. Tobiáš Nymburk za vynikající jakost vystavených výrobků na I. výstavním trhu \u201eČeského ráje\u201c v Jičíně.",
 
     // Gallery
     "gallery.title": "Fotogalerie realizací",
@@ -410,6 +412,8 @@ const translations = {
     "history.badge_item1": "Czech product",
     "history.badge_item2": "Czech supplier",
     "history.badge_item3": "Czech quality",
+    "history.cert_title": "Diploma with the right to mint a silver medal",
+    "history.cert_text": "Awarded to the company J. Tobiáš Nymburk for outstanding quality of exhibited products at the 1st exhibition market of \u201cČeský ráj\u201d in Jičín.",
 
     // Gallery
     "gallery.title": "Photo gallery of realizations",
@@ -645,6 +649,8 @@ const translations = {
     "history.badge_item1": "Tschechisches Produkt",
     "history.badge_item2": "Tschechischer Lieferant",
     "history.badge_item3": "Tschechische Qualität",
+    "history.cert_title": "Diplom mit dem Recht zur Prägung einer Silbermedaille",
+    "history.cert_text": "Verliehen an die Firma J. Tobiáš Nymburk für hervorragende Qualität der ausgestellten Produkte auf dem 1. Messemarkt von \u201eČeský ráj\u201c in Jičín.",
 
     // Gallery
     "gallery.title": "Fotogalerie der Realisierungen",
